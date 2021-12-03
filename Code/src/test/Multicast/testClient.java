@@ -13,11 +13,11 @@ public class testClient {
 
 	    int i = 0;
 	    while(i<10) {
-		byte[] buffer = new byte[100];
-		DatagramPacket packet = new DatagramPacket(buffer,buffer.length);
-		mSocket.receive(packet);
-		System.out.println(new String(buffer));
-		i++;
+	    	byte[] buffer = new byte[100];
+	    	DatagramPacket packet = new DatagramPacket(buffer,buffer.length);
+	    	mSocket.receive(packet);
+	    	System.out.println(new String(buffer));
+	    	i++;
 	    }
 	    mSocket.close();
 	    
