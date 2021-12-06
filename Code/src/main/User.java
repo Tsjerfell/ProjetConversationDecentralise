@@ -16,7 +16,7 @@ import connect.TypedePaquet;
 
 public class User {
 	int addressMac;
-	String psuedo;
+	String pseudo;
 	//otherUser[] listOtherUsers;
 	
 	public User(int addressMac, String psuedo) {	
