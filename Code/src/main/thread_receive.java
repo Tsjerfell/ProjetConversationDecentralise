@@ -21,38 +21,18 @@ class thread_receive extends Thread {
 	    	InetAddress group = null;
 			try {
 				group = InetAddress.getByName("225.6.7.8");
-			
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-				    
-				MulticastSocket mSocket = null;
-			
-				mSocket = new MulticastSocket(3456);
-			
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			
-		   
-				mSocket.joinGroup(group);
-			
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			
+				MulticastSocket mSocket = null;			
+				mSocket = new MulticastSocket(3456);		   
+				mSocket.joinGroup(group);		
 				byte[] buffer = new byte[100];
 				DatagramPacket packet = new DatagramPacket(buffer,buffer.length);
 			
 				mSocket.receive(packet);
-			
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			
 				this.recevoir();
-	    	
-					Thread.sleep(1000);
+	    		Thread.sleep(1000);
 				} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 					e.printStackTrace();
-			}
+				}
 	    }  
 	  }  
 }
